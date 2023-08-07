@@ -1,9 +1,9 @@
 import kotlin.random.Random
 
-fun main(args: Array<String>) {
+fun main() {
     println("----------------------------")
     println("Test iteration:")
-    var winner = deathRollWithPrintout(10000)
+    val winner = deathRollWithPrintout(10000)
     println("Winner = Player${if (winner) "1" else "2"}")
     println("----------------------------")
 
@@ -16,8 +16,8 @@ fun main(args: Array<String>) {
         if (deathRoll(start)) player1Wins++ else player2Wins++
     }
 
-    var player1Percent:Double = (player1Wins/n.toDouble())*100
-    var player2Percent:Double = (player2Wins/n.toDouble())*100
+    val player1Percent:Double = (player1Wins/n.toDouble())*100
+    val player2Percent:Double = (player2Wins/n.toDouble())*100
 
     println("n = $n")
     println("Player1 wins = $player1Wins ($player1Percent%)")
